@@ -4,10 +4,10 @@ This algo is responsible for creating MIS from sis.
 
 lets say there are 5 items in the basket . ( i1 , i2 , i3 , i4 , i5)
 
-(dc~cm)1 -> ( can serve ) ( i1 , i2 , i3) 
-(dc~cm)2 -> ( can serve ) ( i2 , i4 ) 
-(dc~cm)3 -> (can serve) ( i4 , i5 ) 
-(dc~cm)4 -> (can serve) (i1 , i4 ) 
+(dc~cm)1  ( can serve ) ( i1 , i2 , i3) 
+(dc~cm)2  ( can serve ) ( i2 , i4 ) 
+(dc~cm)3  (can serve) ( i4 , i5 ) 
+(dc~cm)4  (can serve) (i1 , i4 ) 
 
 Now in today's date how the solution is generated , is by creating all the possible combinations of (dc~cm)i 
 
