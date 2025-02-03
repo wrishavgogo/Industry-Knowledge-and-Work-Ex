@@ -64,4 +64,37 @@ order 1  ->
 
 
 
+
+
+
+****** Today night got review comments on the same PR , How to clean up my code , I will learn from it. 
+
+My code : 
+
+
+int totalShipmentSizeEnabledAlgo = CollectionUtils.emptyIfNull(slaBasedBestMultiItemSolutionWithDateAndCostList).stream().filter(slaBasedBestMultiItemSolutionWithDateAndCost ->
+                            Objects.nonNull(slaBasedBestMultiItemSolutionWithDateAndCost) && Objects.nonNull(slaBasedBestMultiItemSolutionWithDateAndCost.getBestSolution())
+                                    && Objects.nonNull(slaBasedBestMultiItemSolutionWithDateAndCost.getBestSolution().getShipmentsWithDateAndCost()))
+                    .map(slaBasedBestMultiItemSolutionWithDateAndCost -> slaBasedBestMultiItemSolutionWithDateAndCost.getBestSolution().getShipmentsWithDateAndCost())
+                    .mapToInt(shipments -> shipments.size()).sum();
+
+
+
+How i was told to write the code 
+
+ int totalShipmentSizeEnabledAlgo = CollectionUtils.emptyIfNull(slaBasedBestMultiItemSolutionWithDateAndCostList).
+                    stream()
+                    .filter(slaBasedSol -> Objects.nonNull(slaBasedSol))
+                    .filter(slaBasedSol -> Objects.nonNull(slaBasedSol.getBestSolution()))
+                    .filter(slaBasedSol -> Objects.nonNull(slaBasedSol.getBestSolution().getShipmentsWithDateAndCost()))
+                    .map(slaBasedSol -> slaBasedSol.getBestSolution().getShipmentsWithDateAndCost())
+                    .mapToInt(shipments -> shipments.size()).sum();
+
+
+look how clear the code looks 
+
+"Simple things are costly my friend " 
+
+
+
  
