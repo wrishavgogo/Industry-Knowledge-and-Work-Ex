@@ -66,6 +66,8 @@ public class ResponseBox implements Serializable {
 Now in this one i wrote the code something by using 
 
 Collections.synchronisedSet(new HashSet<>())
+
+Even though its thread safe.It blocks the entire Set . So might cause low performance in concurrency issues . 
 And ConcurrentHashMap<>() ; ---> this marks each ( key , value ) pair thread safe . 
 And I also used Parallel Stream for the first time 
 
