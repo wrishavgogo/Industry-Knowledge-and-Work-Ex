@@ -78,3 +78,24 @@ Then i built it and this file was generated
 solution-generation-frequency-based-0.0.22-SNAPSHOT-SPLIT-INV-FIX-sources.jar  
 
 This i attached in mcse-lite and i got java code 
+
+
+
+
+
+15th Feb 
+
+While debugging inside the solution-generation jar , i found that the debug pointers where moving very slow , 
+In Intellij there is a setting which trying to convert each object toString() , which i turned off manually to 
+using : 
+
+Disable Auto-Expression Evaluation (Most Common Fix)
+Issue: IntelliJ automatically evaluates variables (including toString(), getters, etc.), which can slow down debugging.
+Fix:
+Go to Settings → Build, Execution, Deployment → Debugger → Data Views and disable:
+Enable 'toString()' object view
+Enable automatic evaluation
+Show method return values
+
+
+Then each debug point started moving fast . 
