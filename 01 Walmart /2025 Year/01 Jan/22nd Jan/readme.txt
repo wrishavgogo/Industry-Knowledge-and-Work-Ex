@@ -1,1 +1,0 @@
-I was oncall with my co-worker Anjali . And in the morning itself we came across a interesting problem we had to debug . So to analyze it the approach was interesting we are going to note it down so that we don't forget it 
